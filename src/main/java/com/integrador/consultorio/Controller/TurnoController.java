@@ -59,6 +59,20 @@ public class TurnoController {
         return  turnoService.listarTodos();
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Turno> borrarTurno(@PathVariable long id){
+        ResponseEntity<Turno> response;
+
+        if (turnoService.buscar(id) == null){
+            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        else {
+            turnoService.eliminar(id);
+            response = ResponseEntity.status(HttpStatus.OK).build();
+        }
+        return response;
+    }
+
 
 
 

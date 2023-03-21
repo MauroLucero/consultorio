@@ -185,3 +185,10 @@ UPDATE ODONTOLOGOS SET MATRICULA=?, NOMBRE=?, APELLIDO? WHERE ID=? [42001-214]
 [2023-03-2117:03:28] [ INFO ] [OdontologoIDAOH2:154] Se genero la lista de odontologos con éxito
 [2023-03-2117:03:47] [ INFO ] [OdontologoIDAOH2:178] Se actualizo en la base de datos al odontologo Angelica Pisichilo MP:55452
 [2023-03-2117:03:50] [ INFO ] [OdontologoIDAOH2:154] Se genero la lista de odontologos con éxito
+[2023-03-2119:54:03] [ INFO ] [OdontologoIDAOH2:154] Se genero la lista de odontologos con éxito
+[2023-03-2119:54:55] [ INFO ] [OdontologoIDAOH2:137] Se listaron a los pacientes con éxito
+[2023-03-2119:56:34] [ INFO ] [OdontologoIDAOH2:48] Se guardo en la base de datos al odontologo null null MP:0
+[2023-03-2119:56:55] [ INFO ] [OdontologoIDAOH2:95] Se encontro al paciente con exito
+[2023-03-2119:56:55] [ INFO ] [OdontologoIDAOH2:111] Se encontro al odontologo Francisco Gordon MP:93345con ID= 1
+[2023-03-2119:57:15] [ INFO ] [OdontologoIDAOH2:154] Se genero la lista de odontologos con éxito
+[2023-03-2119:58:09] [ INFO ] [OdontologoIDAOH2:154] Se genero la lista de odontologos con éxito
