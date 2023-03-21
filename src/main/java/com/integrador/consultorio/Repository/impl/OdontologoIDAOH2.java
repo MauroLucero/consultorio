@@ -79,7 +79,6 @@ public class OdontologoIDAOH2 implements IDao<Odontologo> {
         try {
 
             Class.forName(DB_JDBC_DRIVER);
-
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
 
@@ -89,7 +88,7 @@ public class OdontologoIDAOH2 implements IDao<Odontologo> {
 
             ResultSet result = preparedStatement.executeQuery();
 
-            while (result.next()){
+           if (result.next()){
 
                 long idOdontologo = result.getLong("ID");
                 int matricula = result.getInt("MATRICULA");
@@ -98,9 +97,6 @@ public class OdontologoIDAOH2 implements IDao<Odontologo> {
 
                 odontologo = new Odontologo(idOdontologo,matricula,nombre,apellido);
             }
-
-
-
             preparedStatement.close();
 
         } catch (SQLException | ClassNotFoundException throwables) {

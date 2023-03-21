@@ -192,3 +192,4 @@ UPDATE ODONTOLOGOS SET MATRICULA=?, NOMBRE=?, APELLIDO? WHERE ID=? [42001-214]
 [2023-03-2119:56:55] [ INFO ] [OdontologoIDAOH2:111] Se encontro al odontologo Francisco Gordon MP:93345con ID= 1
 [2023-03-2119:57:15] [ INFO ] [OdontologoIDAOH2:154] Se genero la lista de odontologos con éxito
 [2023-03-2119:58:09] [ INFO ] [OdontologoIDAOH2:154] Se genero la lista de odontologos con éxito
+[2023-03-2120:42:40] [ INFO ] [OdontologoIDAOH2:107] Se encontro al odontologo Francisco Gordon MP:93345con ID= 1
