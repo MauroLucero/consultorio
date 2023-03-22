@@ -193,3 +193,73 @@ UPDATE ODONTOLOGOS SET MATRICULA=?, NOMBRE=?, APELLIDO? WHERE ID=? [42001-214]
 [2023-03-2119:57:15] [ INFO ] [OdontologoIDAOH2:154] Se genero la lista de odontologos con éxito
 [2023-03-2119:58:09] [ INFO ] [OdontologoIDAOH2:154] Se genero la lista de odontologos con éxito
 [2023-03-2120:42:40] [ INFO ] [OdontologoIDAOH2:107] Se encontro al odontologo Francisco Gordon MP:93345con ID= 1
+[2023-03-2122:26:51] [ INFO ] [OdontologoIDAOH2:137] Se listaron a los pacientes con éxito
+[2023-03-2122:28:25] [ INFO ] [OdontologoIDAOH2:137] Se listaron a los pacientes con éxito
+[2023-03-2122:29:38] [ INFO ] [OdontologoIDAOH2:137] Se listaron a los pacientes con éxito
+[2023-03-2122:33:38] [ INFO ] [OdontologoIDAOH2:137] Se listaron a los pacientes con éxito
+[2023-03-2122:33:41] [ INFO ] [OdontologoIDAOH2:95] Se encontro al paciente con exito
+[2023-03-2122:33:45] [ INFO ] [OdontologoIDAOH2:95] Se encontro al paciente con exito
+[2023-03-2122:33:48] [ INFO ] [OdontologoIDAOH2:95] Se encontro al paciente con exito
+[2023-03-2122:38:34] [ INFO ] [OdontologoIDAOH2:95] Se encontro al paciente con exito
+[2023-03-2122:38:40] [ INFO ] [OdontologoIDAOH2:95] Se encontro al paciente con exito
+[2023-03-2122:40:15] [ INFO ] [OdontologoIDAOH2:95] Se encontro al paciente con exito
+[2023-03-2122:40:19] [ INFO ] [OdontologoIDAOH2:95] Se encontro al paciente con exito
+[2023-03-2122:40:21] [ INFO ] [OdontologoIDAOH2:95] Se encontro al paciente con exito
+[2023-03-2122:43:27] [ INFO ] [OdontologoIDAOH2:137] Se listaron a los pacientes con éxito
+[2023-03-2122:48:47] [ INFO ] [OdontologoIDAOH2:95] Se encontro al paciente con exito
+[2023-03-2122:48:47] [ INFO ] [OdontologoIDAOH2:193] Se elimino el paciente satisfactoriamente
+[2023-03-2122:48:51] [ INFO ] [OdontologoIDAOH2:137] Se listaron a los pacientes con éxito
+[2023-03-2122:49:00] [ INFO ] [OdontologoIDAOH2:95] Se encontro al paciente con exito
+[2023-03-2122:49:00] [ ERROR] [OdontologoIDAOH2:199] No se pudo eliminar al paciente
+java.lang.NullPointerException: Cannot invoke "com.integrador.consultorio.Model.Paciente.getDomicilio()" because "paciente" is null
+	at com.integrador.consultorio.Repository.impl.PacienteIDAOH2.eliminar(PacienteIDAOH2.java:188)
+	at com.integrador.consultorio.Services.PacienteService.eliminar(PacienteService.java:28)
+	at com.integrador.consultorio.Controller.PacienteController.eliminarPaciente(PacienteController.java:64)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:737)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)

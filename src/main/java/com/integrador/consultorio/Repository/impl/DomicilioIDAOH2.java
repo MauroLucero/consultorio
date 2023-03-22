@@ -98,7 +98,7 @@ public class DomicilioIDAOH2 implements IDao<Domicilio> {
             preparedStatement.setLong(1,id);
 
             ResultSet resultadoBusqueda=preparedStatement.executeQuery();
-            while(resultadoBusqueda.next()){
+            if(resultadoBusqueda.next()){
                 domicilio.setId(resultadoBusqueda.getLong("ID"));
                 domicilio.setCalle(resultadoBusqueda.getString("CALLE"));
                 domicilio.setNumero(resultadoBusqueda.getInt("NUMERO"));
