@@ -50,13 +50,29 @@ public class TurnoController {
     }
 
     @GetMapping("/{id}")
-    public Turno buscarTurno(@PathVariable("id") long id){
-        return turnoService.buscar(id);
+    public ResponseEntity<Turno> buscarTurno(@PathVariable("id") long id){
+        ResponseEntity response;
+        Turno turno = turnoService.buscar(id);
+        if(turno != null){
+            response = ResponseEntity.ok(turno);
+        }
+        else{
+            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return response;
     }
 
     @GetMapping("/")
-    public List<Turno> listarTurnos(){
-        return  turnoService.listarTodos();
+    public ResponseEntity<List<Turno>> listarTurnos(){
+        ResponseEntity response;
+        List<Turno> listaTurnos = turnoService.listarTodos();
+        if(listaTurnos.size() != 0){
+            response = ResponseEntity.ok(listaTurnos);
+        }
+        else{
+            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return response;
     }
 
     @DeleteMapping("/{id}")
