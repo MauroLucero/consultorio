@@ -28,8 +28,8 @@ UPDATE ODONTOLOGOS SET MATRICULA=?, NOMBRE=?, APELLIDO? WHERE ID=? [42001-214]
 	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288)
 	at com.integrador.consultorio.DAO.impl.OdontologoIDAOH2.actualizar(OdontologoIDAOH2.java:171)
 	at com.integrador.consultorio.DAO.impl.OdontologoIDAOH2.actualizar(OdontologoIDAOH2.java:12)
-	at com.integrador.consultorio.Services.OdontologoService.actualizar(OdontologoService.java:41)
-	at com.integrador.consultorio.Controller.OdontologoController.actualizarOdontologo(OdontologoController.java:42)
+	at com.integrador.consultorio.services.OdontologoService.actualizar(OdontologoService.java:41)
+	at com.integrador.consultorio.controller.OdontologoController.actualizarOdontologo(OdontologoController.java:42)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
@@ -103,8 +103,8 @@ UPDATE ODONTOLOGOS SET MATRICULA=?, NOMBRE=?, APELLIDO? WHERE ID=? [42001-214]
 	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288)
 	at com.integrador.consultorio.DAO.impl.OdontologoIDAOH2.actualizar(OdontologoIDAOH2.java:171)
 	at com.integrador.consultorio.DAO.impl.OdontologoIDAOH2.actualizar(OdontologoIDAOH2.java:12)
-	at com.integrador.consultorio.Services.OdontologoService.actualizar(OdontologoService.java:41)
-	at com.integrador.consultorio.Controller.OdontologoController.actualizarOdontologo(OdontologoController.java:42)
+	at com.integrador.consultorio.services.OdontologoService.actualizar(OdontologoService.java:41)
+	at com.integrador.consultorio.controller.OdontologoController.actualizarOdontologo(OdontologoController.java:42)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
@@ -211,10 +211,10 @@ UPDATE ODONTOLOGOS SET MATRICULA=?, NOMBRE=?, APELLIDO? WHERE ID=? [42001-214]
 [2023-03-2122:48:51] [ INFO ] [OdontologoIDAOH2:137] Se listaron a los pacientes con éxito
 [2023-03-2122:49:00] [ INFO ] [OdontologoIDAOH2:95] Se encontro al paciente con exito
 [2023-03-2122:49:00] [ ERROR] [OdontologoIDAOH2:199] No se pudo eliminar al paciente
-java.lang.NullPointerException: Cannot invoke "com.integrador.consultorio.Model.Paciente.getDomicilio()" because "paciente" is null
-	at com.integrador.consultorio.Repository.impl.PacienteIDAOH2.eliminar(PacienteIDAOH2.java:188)
-	at com.integrador.consultorio.Services.PacienteService.eliminar(PacienteService.java:28)
-	at com.integrador.consultorio.Controller.PacienteController.eliminarPaciente(PacienteController.java:64)
+java.lang.NullPointerException: Cannot invoke "com.integrador.consultorio.entity.Paciente.getDomicilio()" because "paciente" is null
+	at com.integrador.consultorio.repository.impl.PacienteIDAOH2.eliminar(PacienteIDAOH2.java:188)
+	at com.integrador.consultorio.services.PacienteService.eliminar(PacienteService.java:28)
+	at com.integrador.consultorio.controller.PacienteController.eliminarPaciente(PacienteController.java:64)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
@@ -263,3 +263,4 @@ java.lang.NullPointerException: Cannot invoke "com.integrador.consultorio.Model.
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
+[2023-03-2420:17:53] [ INFO ] [OdontologoIDAOH2:137] Se listaron a los pacientes con éxito

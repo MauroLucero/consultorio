@@ -1,7 +1,15 @@
-package com.integrador.consultorio.Model;
+package com.integrador.consultorio.entity;
 
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="odontologos")
 public class Odontologo {
-    private long id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
     private int matricula;
     private String nombre;
     private String apellido;
@@ -9,7 +17,8 @@ public class Odontologo {
     public Odontologo() {
     }
 
-    public Odontologo(long id, int matricula, String nombre, String apellido) {
+
+    public Odontologo(Long id, int matricula, String nombre, String apellido) {
         this.id = id;
         this.matricula = matricula;
         this.nombre = nombre;
@@ -22,11 +31,11 @@ public class Odontologo {
         this.apellido = apellido;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

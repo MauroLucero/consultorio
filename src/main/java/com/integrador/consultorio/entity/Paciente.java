@@ -1,9 +1,19 @@
-package com.integrador.consultorio.Model;
+package com.integrador.consultorio.entity;
+
+import jakarta.persistence.*;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import java.time.LocalDate;
 
+
+@Entity
+@Table(name="pacientes")
+
 public class Paciente {
-    private long id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
     private String apellido;
     private String nombre;
     private String email;
@@ -16,7 +26,15 @@ public class Paciente {
     public Paciente() {
     }
 
-
+    public Paciente(Long id, String apellido, String nombre, String email, String dni, LocalDate fechaNacimiento, Domicilio domicilio) {
+        this.id = id;
+        this.apellido = apellido;
+        this.nombre = nombre;
+        this.email = email;
+        this.dni = dni;
+        this.fechaNacimiento = fechaNacimiento;
+        this.domicilio = domicilio;
+    }
 
     public Paciente(String apellido, String nombre, String email, String dni, LocalDate fechaNacimiento, Domicilio domicilio) {
         this.apellido = apellido;
@@ -27,11 +45,11 @@ public class Paciente {
         this.domicilio = domicilio;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

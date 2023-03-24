@@ -1,8 +1,8 @@
-package com.integrador.consultorio.Repository.impl;
+package com.integrador.consultorio.repository.impl;
 
-import com.integrador.consultorio.Repository.IDao;
-import com.integrador.consultorio.Model.Domicilio;
-import com.integrador.consultorio.Model.Paciente;
+import com.integrador.consultorio.repository.IDao;
+import com.integrador.consultorio.entity.Domicilio;
+import com.integrador.consultorio.entity.Paciente;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
