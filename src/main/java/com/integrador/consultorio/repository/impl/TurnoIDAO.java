@@ -1,8 +1,7 @@
-package com.integrador.consultorio.Repository.impl;
+package com.integrador.consultorio.repository.impl;
 
-import com.integrador.consultorio.Repository.IDao;
-import com.integrador.consultorio.Model.Turno;
-import com.integrador.consultorio.Services.TurnoService;
+import com.integrador.consultorio.repository.IDao;
+import com.integrador.consultorio.entity.Turno;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;

@@ -1,12 +1,26 @@
-package com.integrador.consultorio.Model;
+package com.integrador.consultorio.entity;
 
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="domicilios")
 public class Domicilio {
 
-    private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+
+    private Long id;
     private String calle;
     private Integer numero;
     private  String localidad;
     private String provincia;
+
+    @OneToOne(mappedBy = "domicilio")
+    private Paciente paciente;
+
+    public Domicilio() {
+    }
 
     public Domicilio(String calle, Integer numero, String localidad, String provincia) {
         this.calle = calle;
@@ -15,9 +29,7 @@ public class Domicilio {
         this.provincia = provincia;
     }
 
-    public Domicilio(){};
-
-    public Domicilio(long id, String calle, Integer numero, String localidad, String provincia) {
+    public Domicilio(Long id, String calle, Integer numero, String localidad, String provincia) {
         this.id = id;
         this.calle = calle;
         this.numero = numero;
@@ -25,7 +37,7 @@ public class Domicilio {
         this.provincia = provincia;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 

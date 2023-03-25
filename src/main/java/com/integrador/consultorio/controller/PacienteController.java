@@ -1,9 +1,8 @@
-package com.integrador.consultorio.Controller;
+package com.integrador.consultorio.controller;
 
-
-import com.integrador.consultorio.Repository.impl.PacienteIDAOH2;
-import com.integrador.consultorio.Model.Paciente;
-import com.integrador.consultorio.Services.PacienteService;
+import com.integrador.consultorio.entity.Paciente;
+import com.integrador.consultorio.services.PacienteService;
+import com.integrador.consultorio.services.PacienteServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,25 +14,22 @@ import java.util.List;
 @RequestMapping("/pacientes")
 public class PacienteController {
 
-    private final PacienteService pacienteService;
-
-
+    private final PacienteServiceImp pacienteService;
     @Autowired
-    public PacienteController(PacienteService pacienteService){
+    public PacienteController(PacienteServiceImp pacienteService) {
         this.pacienteService = pacienteService;
-        pacienteService.setPacienteService(new PacienteIDAOH2());
     }
 
     @PostMapping("/")
     public ResponseEntity<Paciente> guardarPaciente(@RequestBody Paciente paciente){
         ResponseEntity response;
-       if (pacienteService.guardar(paciente)!=null){
-           response = ResponseEntity.status(HttpStatus.OK).build();
+        if (pacienteService.guardar(paciente)!=null){
+            response = ResponseEntity.status(HttpStatus.OK).build();
         }
-       else{
-           response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-       }
-       return response;
+        else{
+            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return response;
     }
 
     @GetMapping("/{id}")
@@ -52,7 +48,7 @@ public class PacienteController {
     @GetMapping("/")
     public ResponseEntity<List<Paciente>> listarPacientes(){
         ResponseEntity response;
-        List<Paciente> listaPacientes = pacienteService.listarTodos();
+        List<Paciente> listaPacientes = pacienteService.buscarTodos();
         if(listaPacientes.size() != 0){
             response = ResponseEntity.ok(listaPacientes);
         }
@@ -79,7 +75,7 @@ public class PacienteController {
     public ResponseEntity<Paciente> eliminarPaciente(@PathVariable("id") long id){
         ResponseEntity response;
         if(pacienteService.buscar(id) != null){
-            pacienteService.eliminar(id);
+            pacienteService.borrar(id);
             response = ResponseEntity.status(HttpStatus.OK).build();
         }
         else{

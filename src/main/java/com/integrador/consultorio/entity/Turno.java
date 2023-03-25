@@ -1,19 +1,21 @@
-package com.integrador.consultorio.Model;
+package com.integrador.consultorio.entity;
+
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
+
+
 public class Turno {
 
-    private int id;
+
+
+    private Long id;
     private Paciente paciente;
     private Odontologo odontologo;
     private LocalDate fecha;
 
-    public Turno(int id, Paciente paciente, Odontologo odontologo, LocalDate fecha) {
-        this.id = id;
-        this.paciente = paciente;
-        this.odontologo = odontologo;
-        this.fecha = fecha;
+    public Turno() {
     }
 
     public Turno(Paciente paciente, Odontologo odontologo, LocalDate fecha) {
@@ -22,14 +24,18 @@ public class Turno {
         this.fecha = fecha;
     }
 
-    public Turno() {
+    public Turno(Long id, Paciente paciente, Odontologo odontologo, LocalDate fecha) {
+        this.id = id;
+        this.paciente = paciente;
+        this.odontologo = odontologo;
+        this.fecha = fecha;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
