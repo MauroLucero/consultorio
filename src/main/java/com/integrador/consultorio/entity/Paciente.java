@@ -21,6 +21,7 @@ public class Paciente {
 
     private LocalDate fechaNacimiento;
 
+    @Transient
     private Domicilio domicilio;
 
     public Paciente() {
