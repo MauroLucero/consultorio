@@ -3,9 +3,11 @@ package com.integrador.consultorio.services;
 import com.integrador.consultorio.entity.Odontologo;
 import com.integrador.consultorio.repository.OdontologoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class OdontologoServiceImp implements OdontologoService{
 
     OdontologoRepository odontologoRepository;

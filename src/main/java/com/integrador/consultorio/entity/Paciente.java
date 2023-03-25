@@ -14,15 +14,18 @@ public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    private String apellido;
+
     private String nombre;
+    private String apellido;
     private String email;
     private String dni;
 
     private LocalDate fechaNacimiento;
 
-    @Transient
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "domicilio_id", referencedColumnName = "id")
     private Domicilio domicilio;
+
 
     public Paciente() {
     }
@@ -101,4 +104,6 @@ public class Paciente {
     public void setDomicilio(Domicilio domicilio) {
         this.domicilio = domicilio;
     }
+
+
 }

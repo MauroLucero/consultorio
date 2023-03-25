@@ -16,6 +16,9 @@ public class Domicilio {
     private  String localidad;
     private String provincia;
 
+    @OneToOne(mappedBy = "domicilio")
+    private Paciente paciente;
+
     public Domicilio() {
     }
 

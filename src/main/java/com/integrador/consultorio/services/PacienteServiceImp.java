@@ -1,5 +1,6 @@
 package com.integrador.consultorio.services;
 
+import com.integrador.consultorio.entity.Domicilio;
 import com.integrador.consultorio.entity.Paciente;
 import com.integrador.consultorio.repository.DomicilioRepository;
 import com.integrador.consultorio.repository.PacienteRepository;
@@ -24,7 +25,7 @@ public class PacienteServiceImp implements PacienteService{
 
     @Override
     public Paciente guardar(Paciente paciente) {
-        this.domicilioRepository.save(paciente.getDomicilio());
+        Domicilio domicilio = this.domicilioRepository.save(paciente.getDomicilio());
         return this.pacienteRepository.save(paciente);
     }
 
@@ -40,7 +41,7 @@ public class PacienteServiceImp implements PacienteService{
 
     @Override
     public Paciente actualizar(Paciente paciente) {
-        this.domicilioRepository.save(paciente.getDomicilio());
+        Domicilio domicilio = this.domicilioRepository.save(paciente.getDomicilio());
         return this.pacienteRepository.save(paciente);
     }
 
