@@ -68,7 +68,6 @@ public class PacienteServiceImp implements PacienteService{
 
     @Override
     public void borrarPaciente(Long id) {
-        this.domicilioRepository.delete(buscarPaciente(id).getDomicilio());
         this.pacienteRepository.deleteById(id);
     }
 }
