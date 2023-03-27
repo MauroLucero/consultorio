@@ -1,7 +1,10 @@
 package com.integrador.consultorio.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+
+import java.util.Set;
 
 @Entity
 @Table(name="odontologos")
@@ -13,6 +16,9 @@ public class Odontologo {
     private int matricula;
     private String nombre;
     private String apellido;
+    @OneToMany(mappedBy = "odontologo")
+    @JsonIgnore
+    private Set<Turno> turnos;
 
     public Odontologo() {
     }
@@ -61,5 +67,14 @@ public class Odontologo {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+
+    public Set<Turno> getTurnos() {
+        return turnos;
+    }
+
+    public void setTurnos(Set<Turno> turnos) {
+        this.turnos = turnos;
     }
 }

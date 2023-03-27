@@ -1,15 +1,15 @@
 package com.integrador.consultorio.services;
 
-import com.integrador.consultorio.entity.Paciente;
+import com.integrador.consultorio.entity.PacienteDTO;
 
-import java.util.List;
+import java.util.Set;
 
 public interface PacienteService {
 
-    Paciente guardar(Paciente paciente);
-    Paciente buscar(Long id);
-    List<Paciente> buscarTodos();
-    Paciente actualizar(Paciente paciente);
+    void guardarPaciente(PacienteDTO pacienteDTO);
+    PacienteDTO buscarPaciente(Long id);
+    Set<PacienteDTO> buscarTodos();
+    void actualizarPaciente(PacienteDTO pacienteDTO);
 
-    void borrar(Long id);
+    void borrarPaciente(Long id);
 }

@@ -1,9 +1,11 @@
 package com.integrador.consultorio.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import java.time.LocalDate;
+import java.util.Set;
 
 
 @Entity
@@ -25,6 +27,10 @@ public class Paciente {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "domicilio_id", referencedColumnName = "id")
     private Domicilio domicilio;
+
+    @OneToMany(mappedBy = "paciente")
+    @JsonIgnore
+    private Set<Turno> turnos;
 
 
     public Paciente() {
@@ -105,5 +111,11 @@ public class Paciente {
         this.domicilio = domicilio;
     }
 
+    public Set<Turno> getTurnos() {
+        return turnos;
+    }
 
+    public void setTurnos(Set<Turno> turnos) {
+        this.turnos = turnos;
+    }
 }

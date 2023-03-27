@@ -1,53 +1,74 @@
 package com.integrador.consultorio.services;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.integrador.consultorio.entity.Domicilio;
 import com.integrador.consultorio.entity.Paciente;
-import com.integrador.consultorio.repository.DomicilioRepository;
-import com.integrador.consultorio.repository.PacienteRepository;
+import com.integrador.consultorio.entity.PacienteDTO;
+import com.integrador.consultorio.repository.IDomicilioRepository;
+import com.integrador.consultorio.repository.IPacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 @Service
 public class PacienteServiceImp implements PacienteService{
 
-    PacienteRepository pacienteRepository;
-    DomicilioRepository domicilioRepository;
+    IPacienteRepository pacienteRepository;
+    IDomicilioRepository domicilioRepository;
 
     @Autowired
-    public PacienteServiceImp(PacienteRepository pacienteRepository, DomicilioRepository domicilioRepository) {
+    public PacienteServiceImp(IPacienteRepository pacienteRepository, IDomicilioRepository domicilioRepository) {
         this.pacienteRepository = pacienteRepository;
         this.domicilioRepository = domicilioRepository;
     }
 
+    @Autowired
+    ObjectMapper mapper;
 
+    private void guardar(PacienteDTO pacienteDTO){
+        Paciente paciente = mapper.convertValue(pacienteDTO,Paciente.class);
+        this.domicilioRepository.save(paciente.getDomicilio());
+        pacienteRepository.save(paciente);
+    }
     @Override
-    public Paciente guardar(Paciente paciente) {
-        Domicilio domicilio = this.domicilioRepository.save(paciente.getDomicilio());
-        return this.pacienteRepository.save(paciente);
+    public void guardarPaciente(PacienteDTO pacienteDTO) {
+        guardar(pacienteDTO);
     }
 
     @Override
-    public Paciente buscar(Long id) {
-        return this.pacienteRepository.findById(id).orElse(null);
+    public void actualizarPaciente(PacienteDTO pacienteDTO) {
+        guardar(pacienteDTO);
     }
 
     @Override
-    public List<Paciente> buscarTodos() {
-        return this.pacienteRepository.findAll();
+    public PacienteDTO buscarPaciente(Long id) {
+        Paciente paciente = this.pacienteRepository.findById(id).orElse(null);
+        PacienteDTO pacienteDTO= null;
+        if(paciente!=null){
+            pacienteDTO = mapper.convertValue(paciente,PacienteDTO.class);
+        }
+        return pacienteDTO;
     }
 
     @Override
-    public Paciente actualizar(Paciente paciente) {
-        Domicilio domicilio = this.domicilioRepository.save(paciente.getDomicilio());
-        return this.pacienteRepository.save(paciente);
+    public Set<PacienteDTO> buscarTodos() {
+        List<Paciente> pacientes= this.pacienteRepository.findAll();
+        Set<PacienteDTO> pacientesDTO = new HashSet<>();
+        for(Paciente paciente:pacientes){
+            pacientesDTO.add(mapper.convertValue(paciente,PacienteDTO.class));
+        }
+        return pacientesDTO;
     }
 
+
+
     @Override
-    public void borrar(Long id) {
-        this.domicilioRepository.delete(buscar(id).getDomicilio());
-        this.pacienteRepository.delete(buscar(id));
+    public void borrarPaciente(Long id) {
+        this.domicilioRepository.delete(buscarPaciente(id).getDomicilio());
+        this.pacienteRepository.deleteById(id);
     }
 }
