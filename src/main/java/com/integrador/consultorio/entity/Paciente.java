@@ -24,7 +24,7 @@ public class Paciente {
 
     private LocalDate fechaNacimiento;
 
-    @OneToOne(cascade = CascadeType.REMOVE)
+    @OneToOne(cascade = CascadeType.REMOVE,orphanRemoval = true)
     @JoinColumn(name = "domicilio_id", referencedColumnName = "id")
     private Domicilio domicilio;
 
