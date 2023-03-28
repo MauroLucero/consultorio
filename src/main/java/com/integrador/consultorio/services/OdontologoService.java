@@ -1,14 +1,14 @@
 package com.integrador.consultorio.services;
 
-import com.integrador.consultorio.entity.Odontologo;
-import com.integrador.consultorio.entity.Paciente;
+import com.integrador.consultorio.entity.OdontologoDTO;
 
-import java.util.List;
+import java.util.Set;
 
 public interface OdontologoService {
-    Odontologo guardar(Odontologo odontologo);
-    Odontologo buscar(Long id);
-    List<Odontologo> buscarTodos();
-    Odontologo actualizar(Odontologo odontologo);
-    void borrar(Long id);
+    void guardarOdontologo(OdontologoDTO odontologoDTO);
+    OdontologoDTO buscarOdontologo(Long id);
+    Set<OdontologoDTO> buscarTodos();
+    void actualizarOdontologo(OdontologoDTO odontologoDTO);
+    void borrarOdontologo(Long id);
 }
+

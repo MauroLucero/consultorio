@@ -2,6 +2,8 @@ package com.integrador.consultorio.repository;
 
 import com.integrador.consultorio.entity.Domicilio;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface DomicilioRepository extends JpaRepository<Domicilio,Long> {
+@Repository
+public interface IDomicilioRepository extends JpaRepository<Domicilio,Long> {
 }

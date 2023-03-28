@@ -1,42 +1,16 @@
 package com.integrador.consultorio.entity;
 
-import jakarta.persistence.*;
+
 
 import java.time.LocalDate;
 
+public class TurnoDTO {
 
-@Entity
-@Table(name = "Turnos")
-public class Turno {
-
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-
-    @ManyToOne
-    @JoinColumn(name="paciente_id", nullable = false)
     private Paciente paciente;
-    @ManyToOne
-    @JoinColumn(name="odontologo_id", nullable = false)
     private Odontologo odontologo;
     private LocalDate fecha;
 
-    public Turno() {
-    }
-
-    public Turno(Paciente paciente, Odontologo odontologo, LocalDate fecha) {
-        this.paciente = paciente;
-        this.odontologo = odontologo;
-        this.fecha = fecha;
-    }
-
-    public Turno(Long id, Paciente paciente, Odontologo odontologo, LocalDate fecha) {
-        this.id = id;
-        this.paciente = paciente;
-        this.odontologo = odontologo;
-        this.fecha = fecha;
-    }
 
     public Long getId() {
         return id;

@@ -1,13 +1,17 @@
 package com.integrador.consultorio.controller;
 
 import com.integrador.consultorio.entity.Odontologo;
+import com.integrador.consultorio.entity.OdontologoDTO;
 import com.integrador.consultorio.services.OdontologoServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
+
 @RestController
 @RequestMapping("/odontologos")
 public class OdontologoController {
@@ -21,66 +25,31 @@ public class OdontologoController {
 
 
     @PostMapping("/")
-    public ResponseEntity<Odontologo> guardarOdontologo(@RequestBody Odontologo odontologo){
+    public ResponseEntity<?> guardarOdontologo(@RequestBody OdontologoDTO odontologoDTO){
         ResponseEntity response;
-        if (odontologoService.guardar(odontologo)!=null){
-            response = ResponseEntity.status(HttpStatus.OK).build();
-        }
-        else{
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-        return response;
+        odontologoService.guardarOdontologo(odontologoDTO);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Odontologo> buscarOdontologo(@PathVariable("id") long id){
-        ResponseEntity response;
-        Odontologo odontologo = odontologoService.buscar(id);
-        if(odontologo != null){
-            response = ResponseEntity.ok(odontologo);
-        }
-        else{
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-        return response;
+    public OdontologoDTO buscarOdontologo(@PathVariable("id") long id){
+       return odontologoService.buscarOdontologo(id);
     }
 
     @GetMapping("/")
-    public ResponseEntity<List<Odontologo>> listarOdontologos(){
-        ResponseEntity response;
-        List<Odontologo> listaOdontologos = odontologoService.buscarTodos();
-        if(listaOdontologos.size() != 0){
-            response = ResponseEntity.ok(listaOdontologos);
-        }
-        else{
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-        return response;
+    public Collection<OdontologoDTO> listarOdontologos(){
+       return odontologoService.buscarTodos();
     }
 
     @PutMapping("/")
-    public ResponseEntity<Odontologo> actualizarOdontologo(@RequestBody Odontologo odontologo){
-        ResponseEntity response;
-        if(odontologoService.buscar(odontologo.getId()) != null){
-            odontologoService.actualizar(odontologo);
-            response = ResponseEntity.status(HttpStatus.OK).build();
-        }
-        else{
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-        return response;
+    public ResponseEntity<?> actualizarOdontologo(@RequestBody OdontologoDTO odontologoDTO){
+         odontologoService.actualizarOdontologo(odontologoDTO);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Odontologo> eliminarOdontologo(@PathVariable("id") long id){
-        ResponseEntity response;
-        if(odontologoService.buscar(id) != null){
-            odontologoService.borrar(id);
-            response = ResponseEntity.status(HttpStatus.OK).build();
-        }
-        else{
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-        return response;
+    public ResponseEntity<?> eliminarOdontologo(@PathVariable("id") long id){
+        odontologoService.buscarOdontologo(id);
+        return ResponseEntity.ok(HttpStatus.OK);
     }
 }
