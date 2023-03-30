@@ -4,6 +4,7 @@ package com.integrador.consultorio.controller;
 import com.integrador.consultorio.entity.PacienteDTO;
 import com.integrador.consultorio.entity.TurnoDTO;
 import com.integrador.consultorio.services.TurnoService;
+import com.integrador.consultorio.services.TurnoServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,9 +16,9 @@ import java.util.Collection;
 @RequestMapping("/turnos")
 public class TurnoController {
 
-    TurnoService turnoService;
+    TurnoServiceImp turnoService;
     @Autowired
-    public TurnoController(TurnoService turnoService) {
+    public TurnoController(TurnoServiceImp turnoService) {
         this.turnoService = turnoService;
     }
 
