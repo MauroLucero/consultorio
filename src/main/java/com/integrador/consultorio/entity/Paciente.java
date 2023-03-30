@@ -2,7 +2,6 @@ package com.integrador.consultorio.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -22,9 +21,9 @@ public class Paciente {
     private String email;
     private String dni;
 
-    private LocalDate fechaNacimiento;
+    private LocalDate fechaIngreso;
 
-    @OneToOne(cascade = CascadeType.REMOVE,orphanRemoval = true)
+    @OneToOne(cascade = CascadeType.ALL,orphanRemoval = true)
     @JoinColumn(name = "domicilio_id", referencedColumnName = "id")
     private Domicilio domicilio;
 
@@ -36,22 +35,22 @@ public class Paciente {
     public Paciente() {
     }
 
-    public Paciente(Long id, String apellido, String nombre, String email, String dni, LocalDate fechaNacimiento, Domicilio domicilio) {
+    public Paciente(Long id, String apellido, String nombre, String email, String dni, LocalDate fechaIngreso, Domicilio domicilio) {
         this.id = id;
         this.apellido = apellido;
         this.nombre = nombre;
         this.email = email;
         this.dni = dni;
-        this.fechaNacimiento = fechaNacimiento;
+        this.fechaIngreso = fechaIngreso;
         this.domicilio = domicilio;
     }
 
-    public Paciente(String apellido, String nombre, String email, String dni, LocalDate fechaNacimiento, Domicilio domicilio) {
+    public Paciente(String apellido, String nombre, String email, String dni, LocalDate fechaIngreso, Domicilio domicilio) {
         this.apellido = apellido;
         this.nombre = nombre;
         this.email = email;
         this.dni = dni;
-        this.fechaNacimiento = fechaNacimiento;
+        this.fechaIngreso = fechaIngreso;
         this.domicilio = domicilio;
     }
 
@@ -95,12 +94,12 @@ public class Paciente {
         this.dni = dni;
     }
 
-    public LocalDate getFechaNacimiento() {
-        return fechaNacimiento;
+    public LocalDate getFechaIngreso() {
+        return fechaIngreso;
     }
 
-    public void setFechaNacimiento(LocalDate fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+    public void setFechaIngreso(LocalDate fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
     }
 
     public Domicilio getDomicilio() {

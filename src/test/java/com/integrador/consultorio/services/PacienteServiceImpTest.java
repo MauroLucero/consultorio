@@ -24,7 +24,7 @@ class PacienteServiceImpTest {
         p1.setApellido("Lucero");
         p1.setDni("24455773");
         p1.setDomicilio(domicilio);
-        p1.setFechaNacimiento(LocalDate.of(1993,11,12));
+        p1.setFechaIngreso(LocalDate.of(1993,11,12));
 
         pacienteServiceImp.guardarPaciente(p1);
 
@@ -40,7 +40,7 @@ class PacienteServiceImpTest {
         p1.setApellido("Lucero");
         p1.setDni("24455773");
         p1.setDomicilio(domicilio);
-        p1.setFechaNacimiento(LocalDate.of(1993,11,12));
+        p1.setFechaIngreso(LocalDate.of(1993,11,12));
 
         pacienteServiceImp.guardarPaciente(p1);
         PacienteDTO pacienteBuscado = pacienteServiceImp.buscarPaciente(1L);
@@ -58,7 +58,7 @@ class PacienteServiceImpTest {
         p1.setApellido("Lucero");
         p1.setDni("24455773");
         p1.setDomicilio(domicilio);
-        p1.setFechaNacimiento(LocalDate.of(1993,11,12));
+        p1.setFechaIngreso(LocalDate.of(1993,11,12));
 
         pacienteServiceImp.guardarPaciente(p1);
         PacienteDTO pacienteGuardado = pacienteServiceImp.buscarPaciente(1L);
@@ -80,13 +80,13 @@ class PacienteServiceImpTest {
         p1.setApellido("Lucero");
         p1.setDni("24455773");
         p1.setDomicilio(domicilio);
-        p1.setFechaNacimiento(LocalDate.of(1985,11,12));
+        p1.setFechaIngreso(LocalDate.of(1985,11,12));
 
         p2.setNombre("Agustin");
         p2.setApellido("Acosta");
         p2.setDni("35887768");
         p2.setDomicilio(domicilio2);
-        p2.setFechaNacimiento(LocalDate.of(1993,1,11));
+        p2.setFechaIngreso(LocalDate.of(1993,1,11));
 
         pacienteServiceImp.guardarPaciente(p1);
         pacienteServiceImp.guardarPaciente(p2);
