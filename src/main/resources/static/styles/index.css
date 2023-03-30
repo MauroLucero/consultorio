@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333333;
+  }
+  
+  form {
+    width: 400px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+  }
+  
+  a#forgot-password-link {
+    display: block;
+    margin-bottom: 10px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a#forgot-password-link:hover {
+    text-decoration: underline;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }

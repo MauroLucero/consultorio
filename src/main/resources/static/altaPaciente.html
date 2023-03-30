@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./styles/altaPaciente.css" /> 
-</head>
-<body>
-	<h1>Alta de Paciente</h1>
-<form id="add_new_paciente">    
-    <h2>Datos del paciente:</h2>
-	<label>Nombre:</label>
-	<input type="text" id="nombre"><br><br>
-	<label>Apellido:</label>
-	<input type="text" id="apellido"><br><br>
-	<label>Email:</label>
-    <input type="text" id="email"><br><br>
-    <label>DNI:</label>
-    <input type="text" id="dni"><br><br>
-    <label>FECHA:</label>
-    <input type="date" id="fecha"><br><br>
+    <link rel="stylesheet" type="text/css" href="./styles/altaPaciente.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="user-info">
+          <span>Bienvenido, <strong>Juan Pérez</strong></span>
+        </div>
+        <div class="header-buttons">
+          <button id="settings-button">Ajustes</button>
+          <button class="menu-button">Menú principal</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1>Alta de Paciente</h1>
+      <form id="add_new_paciente">
+        <div class="paciente-container">
+          <h2>Datos personales:</h2>
+          <label>Nombre:</label>
+          <input type="text" id="nombre" /><br /><br />
+          <label>Apellido:</label>
+          <input type="text" id="apellido" /><br /><br />
+          <label>Email:</label>
+          <input type="text" id="email" /><br /><br />
+          <label>DNI:</label>
+          <input type="text" id="dni" /><br /><br />
+          <label>FECHA INGRESO:</label>
+          <input type="date" id="fecha" /><br /><br />
+        </div>
+        <div class="domicilio-container">
+          <h2>Domicilio:</h2>
+          <label>Calle:</label>
+          <input type="text" id="calle" /><br /><br />
+          <label>Número:</label>
+          <input type="number" id="numeroCalle" /><br /><br />
+          <label>Localidad:</label>
+          <input type="text" id="localidad" /><br /><br />
+          <label>Provincia:</label>
+          <input type="text" id="provincia" /><br /><br />
+        </div>
 
-    <h2>Domicilio del paciente:</h2>
-    <label>Calle:</label>
-    <input type="text" id="calle"><br><br>
-    <label>Número:</label>
-    <input type="number" id="numeroCalle"><br><br>
-    <label>Localidad:</label>
-    <input type="text" id="localidad"><br><br>
-    <label>Provincia:</label>
-    <input type="text" id="provincia"><br><br>
-
-	
-	<button type='submit' id="agregar">Agregar</button>
-
-
-</form>
+        <button type="submit" id="agregar">Agregar</button>
+      </form>
+    </main>
     <script type="text/javascript" src="./js/postEstudiante.js"></script>
-</body>
+  </body>
 </html>
