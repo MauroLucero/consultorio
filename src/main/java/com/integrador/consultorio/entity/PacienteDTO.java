@@ -11,7 +11,7 @@ public class PacienteDTO {
     private String email;
     private String dni;
 
-    private LocalDate fechaNacimiento;
+    private LocalDate fechaIngreso;
 
     private Domicilio domicilio;
 
@@ -56,12 +56,12 @@ public class PacienteDTO {
         this.dni = dni;
     }
 
-    public LocalDate getFechaNacimiento() {
-        return fechaNacimiento;
+    public LocalDate getFechaIngreso() {
+        return fechaIngreso;
     }
 
-    public void setFechaNacimiento(LocalDate fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+    public void setFechaIngreso(LocalDate fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
     }
 
     public Domicilio getDomicilio() {

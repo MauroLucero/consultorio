@@ -1,14 +1,10 @@
 package com.integrador.consultorio.services;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.integrador.consultorio.entity.Domicilio;
 import com.integrador.consultorio.entity.Paciente;
 import com.integrador.consultorio.entity.PacienteDTO;
-import com.integrador.consultorio.repository.IDomicilioRepository;
 import com.integrador.consultorio.repository.IPacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -18,12 +14,11 @@ import java.util.Set;
 public class PacienteServiceImp implements PacienteService{
 
     IPacienteRepository pacienteRepository;
-    IDomicilioRepository domicilioRepository;
+
 
     @Autowired
-    public PacienteServiceImp(IPacienteRepository pacienteRepository, IDomicilioRepository domicilioRepository) {
+    public PacienteServiceImp(IPacienteRepository pacienteRepository) {
         this.pacienteRepository = pacienteRepository;
-        this.domicilioRepository = domicilioRepository;
     }
 
     @Autowired
@@ -31,7 +26,6 @@ public class PacienteServiceImp implements PacienteService{
 
     private void guardar(PacienteDTO pacienteDTO){
         Paciente paciente = mapper.convertValue(pacienteDTO,Paciente.class);
-        this.domicilioRepository.save(paciente.getDomicilio());
         pacienteRepository.save(paciente);
     }
     @Override
@@ -70,4 +64,6 @@ public class PacienteServiceImp implements PacienteService{
     public void borrarPaciente(Long id) {
         this.pacienteRepository.deleteById(id);
     }
+
+
 }

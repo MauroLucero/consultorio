@@ -1,10 +1,7 @@
 package com.integrador.consultorio.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.integrador.consultorio.entity.Odontologo;
-import com.integrador.consultorio.entity.OdontologoDTO;
-import com.integrador.consultorio.entity.Turno;
-import com.integrador.consultorio.entity.TurnoDTO;
+import com.integrador.consultorio.entity.*;
 import com.integrador.consultorio.repository.IOdontologoRepository;
 import com.integrador.consultorio.repository.IPacienteRepository;
 import com.integrador.consultorio.repository.ITurnoRepository;
@@ -18,13 +15,13 @@ import java.util.Set;
 public class TurnoServiceImp implements TurnoService{
 
     private final ITurnoRepository turnoRepository;
-    private final PacienteService pacienteService;
-    private final OdontologoService odontologoService;
+    private final IPacienteRepository pacienteRepository;
+    private final IOdontologoRepository odontologoRepository;
     @Autowired
-    public TurnoServiceImp(ITurnoRepository turnoRepository, PacienteService pacienteService, OdontologoService odontologoService) {
+    public TurnoServiceImp(ITurnoRepository turnoRepository, IPacienteRepository pacienteRepository, IOdontologoRepository odontologoRepository) {
         this.turnoRepository = turnoRepository;
-        this.pacienteService = pacienteService;
-        this.odontologoService = odontologoService;
+        this.pacienteRepository = pacienteRepository;
+        this.odontologoRepository = odontologoRepository;
     }
 
 
@@ -33,8 +30,38 @@ public class TurnoServiceImp implements TurnoService{
     @Autowired
     ObjectMapper mapper;
 
+
+    /*Conversion DTO*/
+
+//    private TurnoDTO turnoATurnoDto(Turno turno){
+//        TurnoDTO turnoDTO = new TurnoDTO();
+//        turnoDTO.setId(turno.getId());
+//        turnoDTO.setFecha(turno.getFecha());
+//
+//        turnoDTO.setPaciente(new Paciente());
+//        turnoDTO.getPaciente().setId(turno.getPaciente().getId());
+//
+//        turnoDTO.setOdontologo(new Odontologo());
+//        turnoDTO.getOdontologo().setId(turno.getOdontologo().getId());
+//
+//        return turnoDTO;
+//    }
+//
+//    private Turno turnoDtoATurno(TurnoDTO turnoDTO){
+//        Turno turno = new Turno();
+//        turno.setId(turnoDTO.getId());
+//        turno.setFecha(turnoDTO.getFecha());
+//
+//        turno.setPaciente(pacienteRepository.findById(turnoDTO.getPaciente().getId()).orElse(null));
+//        turno.setOdontologo(odontologoRepository.findById(turnoDTO.getOdontologo().getId()).orElse(null));
+//
+//        return turno;
+//    }
+
+
+
     private void guardar(TurnoDTO turnoDTO){
-        if(pacienteService.buscarPaciente(turnoDTO.getPaciente().getId())!=null && odontologoService.buscarOdontologo(turnoDTO.getOdontologo().getId())!=null){
+        if(!pacienteRepository.findById(turnoDTO.getPaciente().getId()).isEmpty() && !odontologoRepository.findById(turnoDTO.getOdontologo().getId()).isEmpty()){
         Turno turno = mapper.convertValue(turnoDTO,Turno.class);
         turnoRepository.save(turno);
         }
