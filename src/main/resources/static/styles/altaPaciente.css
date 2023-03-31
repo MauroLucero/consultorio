@@ -64,6 +64,11 @@ form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+#add_new_paciente {
+  display: none;
+}
+
+
 h1 {
   text-align: center;
 }
@@ -107,4 +112,123 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #3e8e41;
+}
+
+#mostrar-formulario {
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}
+#pacientes ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#pacientes li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#pacientes li:last-child {
+  border-bottom: none;
+}
+
+#pacientes a {
+  text-decoration: none;
+  color: #333;
+}
+
+#pacientes a:hover {
+  text-decoration: underline;
+  color: #666;
+}
+
+#pacientes {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.paciente {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.paciente-nombre {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.paciente-dni {
+  color: #999999;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.paciente-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.paciente-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.paciente-info {
+  flex-grow: 1;
+}
+
+.paciente-nombre {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.paciente-dni {
+  margin: 0;
+}
+
+.paciente-actions {
+  display: flex;
+  align-items: center;
+}
+
+.editar-button,
+.borrar-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+.borrar-button {
+  background-color: #dc3545;
+}
+
+.paciente-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
