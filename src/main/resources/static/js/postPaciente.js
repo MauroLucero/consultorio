@@ -56,15 +56,16 @@ window.addEventListener("load", function () {
 });
 
 function deleteBy(id) {
+  if (confirm("Eliminar paciente?")){
   const url = "http://localhost:8080/pacientes/" + id;
-  const settings = {
-    method: "DELETE",
-  };
+    const settings = {
+      method: "DELETE",
+    };
 
-  fetch(url, settings).then(response => response.JSON);
+    fetch(url, settings).then(response => response.JSON);
 
-  let idPaciente = "#paciente-" + id;
-  document.querySelector(idPaciente).remove();
+    let idPaciente = "#paciente-" + id;
+    document.querySelector(idPaciente).remove();}
 }
 
 const botonMostrar = document.getElementById("mostrar-formulario");
