@@ -6,17 +6,17 @@ window.addEventListener("load", function () {
     .then((data) => {
       const pacientesDiv = document.getElementById("pacientes");
       const listaPacientes = document.createElement("ul");
-      listaPacientes.setAttribute("class","paciente-list")
+      listaPacientes.setAttribute("class", "paciente-list");
 
       data.forEach((paciente) => {
         listaPacientes.innerHTML +=
-          '<li class="paciente-item"><div class="paciente-info"><h3 class="paciente-nombre">' +
+          '<li class="paciente-item" id="paciente-'+paciente.id +'"><div class="paciente-info"><h3 class="paciente-nombre">' +
           paciente.nombre +
           " " +
           paciente.apellido +
           '</h3><p class="paciente-dni">DNI: ' +
           paciente.dni +
-          '</p></div><div class="paciente-actions"><button class="editar-button">Editar</button><button class="borrar-button">Borrar</button></div></li>';
+          '</p></div><div class="paciente-actions"><button class="editar-button">Editar</button><button class="borrar-button" onclick="deleteBy('+paciente.id+')">Borrar</button></div></li>';
       });
 
       pacientesDiv.appendChild(listaPacientes);
@@ -54,6 +54,18 @@ window.addEventListener("load", function () {
       });
   });
 });
+
+function deleteBy(id) {
+  const url = "http://localhost:8080/pacientes/" + id;
+  const settings = {
+    method: "DELETE",
+  };
+
+  fetch(url, settings).then(response => response.JSON);
+
+  let idPaciente = "#paciente-" + id;
+  document.querySelector(idPaciente).remove();
+}
 
 const botonMostrar = document.getElementById("mostrar-formulario");
 const formulario = document.getElementById("add_new_paciente");

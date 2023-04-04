@@ -64,11 +64,6 @@ form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-#add_new_paciente {
-  display: none;
-}
-
-
 h1 {
   text-align: center;
 }
@@ -114,6 +109,10 @@ button[type="submit"]:hover {
   background-color: #3e8e41;
 }
 
+#add_new_paciente {
+  display: none;
+}
+
 #mostrar-formulario {
   background-color: #4caf50;
   color: white;
@@ -122,8 +121,13 @@ button[type="submit"]:hover {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  display: block;
+  transition: background-color 0.3s ease;
 }
+
+#mostrar-formulario:hover {
+  background-color: #337935;
+}
+
 #pacientes ul {
   list-style: none;
   margin: 0;
@@ -221,10 +225,18 @@ button[type="submit"]:hover {
   border-radius: 4px;
   padding: 5px 10px;
   margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.editar-button:hover {
+  background-color: #0158b4;
 }
 
 .borrar-button {
   background-color: #dc3545;
+}
+.borrar-button:hover {
+  background-color: #91242f;
 }
 
 .paciente-actions {
