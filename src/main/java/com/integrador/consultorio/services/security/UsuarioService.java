@@ -20,7 +20,6 @@ public class UsuarioService {
     public Usuario guardar(Usuario usuario) throws BadRequestException {
         if (usuario == null)
             throw new BadRequestException("El usuario no puede ser null");
-        rolRepository.save(usuario.getRol());
         usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
         return usuarioRepository.save(usuario);
     }

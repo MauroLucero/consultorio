@@ -14,7 +14,7 @@ public class Usuario {
     private String password;
 
 
-    @OneToOne(cascade = CascadeType.MERGE,orphanRemoval = true)
+    @OneToOne(cascade = CascadeType.ALL,orphanRemoval = true)
     @JoinColumn(name = "rol_id", referencedColumnName = "id")
     private Rol rol;
     public Usuario() {
