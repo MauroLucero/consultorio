@@ -1,7 +1,6 @@
 package com.integrador.consultorio.controller;
 
-import com.integrador.consultorio.entity.Odontologo;
-import com.integrador.consultorio.entity.OdontologoDTO;
+import com.integrador.consultorio.model.OdontologoDTO;
 import com.integrador.consultorio.services.OdontologoServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,8 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
-import java.util.List;
-import java.util.Set;
 
 @RestController
 @RequestMapping("/odontologos")

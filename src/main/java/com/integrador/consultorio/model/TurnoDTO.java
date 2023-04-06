@@ -1,6 +1,9 @@
-package com.integrador.consultorio.entity;
+package com.integrador.consultorio.model;
 
 
+
+import com.integrador.consultorio.entity.Odontologo;
+import com.integrador.consultorio.entity.Paciente;
 
 import java.time.LocalDate;
 

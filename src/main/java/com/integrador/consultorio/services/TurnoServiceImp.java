@@ -2,6 +2,7 @@ package com.integrador.consultorio.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.integrador.consultorio.entity.*;
+import com.integrador.consultorio.model.TurnoDTO;
 import com.integrador.consultorio.repository.IOdontologoRepository;
 import com.integrador.consultorio.repository.IPacienteRepository;
 import com.integrador.consultorio.repository.ITurnoRepository;

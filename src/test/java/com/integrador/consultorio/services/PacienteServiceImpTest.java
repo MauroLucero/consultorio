@@ -1,7 +1,7 @@
 package com.integrador.consultorio.services;
 
 import com.integrador.consultorio.entity.Domicilio;
-import com.integrador.consultorio.entity.PacienteDTO;
+import com.integrador.consultorio.model.PacienteDTO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

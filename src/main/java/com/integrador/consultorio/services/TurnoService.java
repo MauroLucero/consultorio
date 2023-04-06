@@ -1,7 +1,6 @@
 package com.integrador.consultorio.services;
 
-import com.integrador.consultorio.entity.PacienteDTO;
-import com.integrador.consultorio.entity.TurnoDTO;
+import com.integrador.consultorio.model.TurnoDTO;
 
 import java.util.Set;
 

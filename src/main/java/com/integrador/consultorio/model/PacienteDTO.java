@@ -1,4 +1,6 @@
-package com.integrador.consultorio.entity;
+package com.integrador.consultorio.model;
+
+import com.integrador.consultorio.entity.Domicilio;
 
 import java.time.LocalDate;
 

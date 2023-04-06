@@ -1,9 +1,7 @@
 package com.integrador.consultorio.controller;
 
 
-import com.integrador.consultorio.entity.PacienteDTO;
-import com.integrador.consultorio.entity.TurnoDTO;
-import com.integrador.consultorio.services.TurnoService;
+import com.integrador.consultorio.model.TurnoDTO;
 import com.integrador.consultorio.services.TurnoServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

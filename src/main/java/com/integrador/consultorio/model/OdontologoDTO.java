@@ -1,4 +1,4 @@
-package com.integrador.consultorio.entity;
+package com.integrador.consultorio.model;
 
 public class OdontologoDTO {
     private Long id;

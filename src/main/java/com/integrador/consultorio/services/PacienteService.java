@@ -1,6 +1,6 @@
 package com.integrador.consultorio.services;
 
-import com.integrador.consultorio.entity.PacienteDTO;
+import com.integrador.consultorio.model.PacienteDTO;
 
 import java.util.Set;
 

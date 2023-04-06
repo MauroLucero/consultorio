@@ -1,24 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinica - Inicio de sesion</title>
-    <link rel="stylesheet" href="./styles/index.css">
-</head>
-<body>
-	<h1>Iniciar Sesión</h1>
-	<form action="procesar-login.php" method="POST">
-		<label for="usuario">Usuario:</label>
-		<input type="text" id="usuario" name="usuario" required><br>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de inicio</title>
+    <link rel="stylesheet" href="./styles/inicio.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="user-info">
+          <span>Bienvenido, <strong>Juan Pérez</strong></span>
+        </div>
 
-		<label for="contrasena">Contraseña:</label>
-		<input type="password" id="contrasena" name="contrasena" required><br>
-
-		<a href="#" id="forgot-password-link">¿Olvidaste tu contraseña?</a><br>
-
-		<input type="submit" value="Ingresar">
-	</form>
-</body>
+        <div class="header-buttons">
+          <button id="settings-button">Ajustes</button>
+          <button id="logout-button">Cerrar Sesión</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="tarjeta">
+        <h2>Odontólogos</h2>
+        <p>Ver lista de odontólogos registrados</p>
+        <a href="#">Ir a la lista de odontólogos</a>
+      </div>
+      <div class="tarjeta">
+        <h2>Pacientes</h2>
+        <p>Ver lista de pacientes registrados</p>
+        <a href="#">Ir a la lista de pacientes</a>
+      </div>
+      <div class="tarjeta">
+        <h2>Turnos</h2>
+        <p>Ver lista de turnos programados</p>
+        <a href="#">Ir a la lista de turnos</a>
+      </div>
+    </main>
+  </body>
 </html>

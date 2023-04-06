@@ -1,6 +1,6 @@
 package com.integrador.consultorio.services;
 
-import com.integrador.consultorio.entity.OdontologoDTO;
+import com.integrador.consultorio.model.OdontologoDTO;
 
 import java.util.Set;
 

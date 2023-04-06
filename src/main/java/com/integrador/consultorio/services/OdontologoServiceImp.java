@@ -2,9 +2,7 @@ package com.integrador.consultorio.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.integrador.consultorio.entity.Odontologo;
-import com.integrador.consultorio.entity.OdontologoDTO;
-import com.integrador.consultorio.entity.Paciente;
-import com.integrador.consultorio.entity.PacienteDTO;
+import com.integrador.consultorio.model.OdontologoDTO;
 import com.integrador.consultorio.repository.IOdontologoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
