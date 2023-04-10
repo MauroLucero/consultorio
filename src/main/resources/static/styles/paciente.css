@@ -113,6 +113,10 @@ button[type="submit"]:hover {
   display: none;
 }
 
+#div_edit_paciente {
+  display: none;
+}
+
 #mostrar-formulario {
   background-color: #4caf50;
   color: white;

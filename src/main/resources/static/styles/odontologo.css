@@ -113,6 +113,10 @@ button[type="submit"]:hover {
   display: none;
 }
 
+#div_odontologo_updating {
+  display: none;
+}
+
 #mostrar-formulario {
   background-color: #4caf50;
   color: white;
@@ -233,5 +237,3 @@ button[type="submit"]:hover {
 .borrar-button:hover {
   background-color: #91242f;
 }
-
-

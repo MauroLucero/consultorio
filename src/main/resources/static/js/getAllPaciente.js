@@ -16,7 +16,9 @@ window.addEventListener("load", function () {
           paciente.apellido +
           '</h3><p class="paciente-dni">DNI: ' +
           paciente.dni +
-          '</p></div><div class="paciente-actions"><button class="editar-button">Editar</button><button class="borrar-button" onclick="deleteBy(' +
+          '</p></div><div class="paciente-actions"><button class="editar-button" onclick="findBy(' +
+          paciente.id +
+          ')">Editar</button><button class="borrar-button" onclick="deleteBy(' +
           paciente.id +
           ')">Borrar</button></div></li>';
       });

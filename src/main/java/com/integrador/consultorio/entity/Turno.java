@@ -70,4 +70,6 @@ public class Turno {
     public void setFecha(LocalDateTime fecha) {
         this.fecha = fecha;
     }
+
+
 }

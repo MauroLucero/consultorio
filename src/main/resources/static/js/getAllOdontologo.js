@@ -15,7 +15,10 @@ window.addEventListener("load", function () {
           " " +
           odontologo.apellido +
           '</h3><p class="odontologo-matricula">Matricula: ' +
-          odontologo.matricula +'</p></div><div class="odontologo-actions"><button class="editar-button">Editar</button><button class="borrar-button" onclick="deleteBy(' +
+          odontologo.matricula +
+          '</p></div><div class="odontologo-actions"><button class="editar-button" onclick="findBy(' +
+          odontologo.id +
+          ')">Editar</button><button class="borrar-button" onclick="deleteBy(' +
           odontologo.id +
           ')">Borrar</button></div></li>';
       });

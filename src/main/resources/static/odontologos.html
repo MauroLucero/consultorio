@@ -37,10 +37,29 @@
 
         <button type="submit" id="agregar">Agregar</button>
       </form>
+      <div id="div_odontologo_updating">
+        <form id="edit_odontologo">
+          <div class="odontologo-container">
+            <h2>Datos personales:</h2>
+            <label>Id:</label>
+            <input type="text" id="odontologo_id" readonly />
+            <label>Nombre:</label>
+            <input type="text" id="nombre-edit" required />
+            <label>Apellido:</label>
+            <input type="text" id="apellido-edit" required />
+            <label>Matricula:</label>
+            <input type="number" id="matricula-edit" required />
+          </div>
+
+          <button type="submit" id="agregar">Actualizar</button>
+        </form>
+      </div>
+
       <div id="odontologos"></div>
     </main>
     <script type="text/javascript" src="js/postOdontologo.js"></script>
     <script type="text/javascript" src="js/deleteOdontologo.js"></script>
     <script type="text/javascript" src="js/getAllOdontologo.js"></script>
+    <script type="text/javascript" src="js/putOdontologo.js"></script>
   </body>
 </html>

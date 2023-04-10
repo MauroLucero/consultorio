@@ -52,10 +52,45 @@
 
         <button type="submit" id="agregar">Agregar</button>
       </form>
+      <div id="div_edit_paciente">
+        <form id="edit_paciente">
+          <div class="paciente-container">
+            <h2>Datos personales:</h2>
+            <label>Id:</label>
+            <input type="text" id="paciente_id" readonly />
+            <label>Nombre:</label>
+            <input type="text" id="nombre-edit" required />
+            <label>Apellido:</label>
+            <input type="text" id="apellido-edit" required />
+            <label>Email:</label>
+            <input type="text" id="email-edit" required />
+            <label>DNI:</label>
+            <input type="text" id="dni-edit" required />
+            <label>FECHA INGRESO:</label>
+            <input type="date" id="fecha-edit" required />
+          </div>
+          <div class="domicilio-container">
+            <h2>Domicilio:</h2>
+            <label>Id:</label>
+            <input type="text" id="domicilio_id" readonly />
+            <label>Calle:</label>
+            <input type="text" id="calle-edit" required />
+            <label>Número:</label>
+            <input type="number" id="numeroCalle-edit" required />
+            <label>Localidad:</label>
+            <input type="text" id="localidad-edit" required />
+            <label>Provincia:</label>
+            <input type="text" id="provincia-edit" required />
+          </div>
+
+          <button type="submit" id="agregar">Actualizar</button>
+        </form>
+      </div>
       <div id="pacientes"></div>
     </main>
     <script type="text/javascript" src="js/postPaciente.js"></script>
     <script type="text/javascript" src="js/deletePaciente.js"></script>
     <script type="text/javascript" src="js/getAllPaciente.js"></script>
+    <script type="text/javascript" src="js/putPaciente.js"></script>
   </body>
 </html>
