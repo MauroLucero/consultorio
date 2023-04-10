@@ -174,11 +174,14 @@ button[type="submit"]:hover {
 }
 
 .odontologo-nombre {
+  margin: 0;
+  font-size: 1.2em;
   font-weight: bold;
   margin-right: 10px;
 }
 
 .odontologo-matricula {
+  margin: 0;
   color: #999999;
   font-size: 14px;
   margin-right: 10px;
@@ -203,18 +206,10 @@ button[type="submit"]:hover {
   flex-grow: 1;
 }
 
-.odontologo-nombre {
-  margin: 0;
-  font-size: 1.2em;
-}
-
-.odontologo-matricula {
-  margin: 0;
-}
-
 .odontologo-actions {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .editar-button,
@@ -239,8 +234,4 @@ button[type="submit"]:hover {
   background-color: #91242f;
 }
 
-.odontologo-actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
+

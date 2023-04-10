@@ -176,12 +176,15 @@ button[type="submit"]:hover {
 .turno-nombre {
   font-weight: bold;
   margin-right: 10px;
+  margin: 0;
+    font-size: 1.2em;
 }
 
 .turno-dni {
   color: #999999;
   font-size: 14px;
   margin-right: 10px;
+  margin: 0;
 }
 
 .turno-list {
@@ -203,18 +206,12 @@ button[type="submit"]:hover {
   flex-grow: 1;
 }
 
-.turno-nombre {
-  margin: 0;
-  font-size: 1.2em;
-}
 
-.turno-dni {
-  margin: 0;
-}
 
 .turno-actions {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .editar-button,
@@ -239,11 +236,7 @@ button[type="submit"]:hover {
   background-color: #91242f;
 }
 
-.turno-actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
+
 
 select,
 input[type="date"] {

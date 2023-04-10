@@ -4,10 +4,10 @@ window.addEventListener("load", function () {
   formulario.addEventListener("submit", function (event) {
     const formDataTurno = {
       paciente: {
-        id: parseInt(document.querySelector("#paciente-turno").value),
+        id: parseInt(document.querySelector("#paciente-turno").value,10),
       },
       odontologo: {
-        id: parseInt(document.querySelector("#odontologo-turno").value),
+        id: parseInt(document.querySelector("#odontologo-turno").value,10),
       },
       fecha: document.querySelector("#fecha").value,
     };
