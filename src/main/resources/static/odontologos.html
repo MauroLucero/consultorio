@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/odontologo.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="user-info">
+          <span>Bienvenido, <strong>Juan Pérez</strong></span>
+        </div>
+        <div class="header-buttons">
+          <button id="settings-button">Ajustes</button>
+          <a href="./index.html">
+            <button class="menu-button">Menú principal</button>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1>Administrar odontólogos</h1>
+      <button id="mostrar-formulario">Agregar odontologo</button>
+      <form id="add_new_odontologo">
+        <div class="odontologo-container">
+          <h2>Datos personales:</h2>
+          <label>Nombre:</label>
+          <input type="text" id="nombre" /><br /><br />
+          <label>Apellido:</label>
+          <input type="text" id="apellido" /><br /><br />
+          <label>Matricula:</label>
+          <input type="number" id="matricula" /><br /><br />
+        </div>
+
+        <button type="submit" id="agregar">Agregar</button>
+      </form>
+      <div id="odontologos"></div>
+    </main>
+    <script type="text/javascript" src="js/postOdontologo.js"></script>
+    <script type="text/javascript" src="js/deleteOdontologo.js"></script>
+    <script type="text/javascript" src="js/getAllOdontologo.js"></script>
+  </body>
+</html>

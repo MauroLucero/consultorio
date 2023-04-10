@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./styles/altaPaciente.css" />
+    <link rel="stylesheet" type="text/css" href="styles/paciente.css" />
   </head>
   <body>
     <header>
@@ -15,7 +15,9 @@
         </div>
         <div class="header-buttons">
           <button id="settings-button">Ajustes</button>
-          <button class="menu-button">Menú principal</button>
+          <a href="./index.html">
+            <button class="menu-button">Menú principal</button>
+          </a>
         </div>
       </div>
     </header>
@@ -50,10 +52,10 @@
 
         <button type="submit" id="agregar">Agregar</button>
       </form>
-      <div id="pacientes">
-
-      </div>
+      <div id="pacientes"></div>
     </main>
     <script type="text/javascript" src="js/postPaciente.js"></script>
+    <script type="text/javascript" src="js/deletePaciente.js"></script>
+    <script type="text/javascript" src="js/getAllPaciente.js"></script>
   </body>
 </html>

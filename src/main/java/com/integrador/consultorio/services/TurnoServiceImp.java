@@ -24,10 +24,6 @@ public class TurnoServiceImp implements TurnoService{
         this.pacienteRepository = pacienteRepository;
         this.odontologoRepository = odontologoRepository;
     }
-
-
-
-
     @Autowired
     ObjectMapper mapper;
 
@@ -62,7 +58,7 @@ public class TurnoServiceImp implements TurnoService{
 
 
     private void guardar(TurnoDTO turnoDTO){
-        if(!pacienteRepository.findById(turnoDTO.getPaciente().getId()).isEmpty() && !odontologoRepository.findById(turnoDTO.getOdontologo().getId()).isEmpty()){
+        if(pacienteRepository.findById(turnoDTO.getPaciente().getId()).isPresent() && odontologoRepository.findById(turnoDTO.getOdontologo().getId()).isPresent()){
         Turno turno = mapper.convertValue(turnoDTO,Turno.class);
         turnoRepository.save(turno);
         }

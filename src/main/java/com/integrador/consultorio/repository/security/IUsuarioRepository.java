@@ -1,4 +1,4 @@
-package com.integrador.consultorio.repository;
+package com.integrador.consultorio.repository.security;
 
 import com.integrador.consultorio.entity.security.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;

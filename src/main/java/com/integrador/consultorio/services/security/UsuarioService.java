@@ -3,8 +3,8 @@ package com.integrador.consultorio.services.security;
 
 import com.integrador.consultorio.entity.security.Usuario;
 import com.integrador.consultorio.exceptions.BadRequestException;
-import com.integrador.consultorio.repository.IRolRepository;
-import com.integrador.consultorio.repository.IUsuarioRepository;
+import com.integrador.consultorio.repository.security.IRolRepository;
+import com.integrador.consultorio.repository.security.IUsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

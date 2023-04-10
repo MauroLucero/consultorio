@@ -1,0 +1,246 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/*Header*/
+
+header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #cccccc;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.user-info {
+  font-size: 18px;
+}
+
+.user-info strong {
+  font-weight: bold;
+}
+
+.header-buttons button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.menu-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#settings-button {
+  background-color: #cccccc;
+}
+
+#settings-button:hover {
+  background-color: #999999;
+}
+
+/* Form */
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+#add_new_odontologo {
+  display: none;
+}
+
+#mostrar-formulario {
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#mostrar-formulario:hover {
+  background-color: #337935;
+}
+
+#odontologos ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#odontologos li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#odontologos li:last-child {
+  border-bottom: none;
+}
+
+#odontologos a {
+  text-decoration: none;
+  color: #333;
+}
+
+#odontologos a:hover {
+  text-decoration: underline;
+  color: #666;
+}
+
+#odontologos {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.odontologo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.odontologo-nombre {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.odontologo-matricula {
+  color: #999999;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.odontologo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.odontologo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.odontologo-info {
+  flex-grow: 1;
+}
+
+.odontologo-nombre {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.odontologo-matricula {
+  margin: 0;
+}
+
+.odontologo-actions {
+  display: flex;
+  align-items: center;
+}
+
+.editar-button,
+.borrar-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.editar-button:hover {
+  background-color: #0158b4;
+}
+
+.borrar-button {
+  background-color: #dc3545;
+}
+.borrar-button:hover {
+  background-color: #91242f;
+}
+
+.odontologo-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

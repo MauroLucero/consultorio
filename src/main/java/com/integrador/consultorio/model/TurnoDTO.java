@@ -6,13 +6,14 @@ import com.integrador.consultorio.entity.Odontologo;
 import com.integrador.consultorio.entity.Paciente;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class TurnoDTO {
 
     private Long id;
     private Paciente paciente;
     private Odontologo odontologo;
-    private LocalDate fecha;
+    private LocalDateTime fecha;
 
 
     public Long getId() {
@@ -39,11 +40,11 @@ public class TurnoDTO {
         this.odontologo = odontologo;
     }
 
-    public LocalDate getFecha() {
+    public LocalDateTime getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDate fecha) {
+    public void setFecha(LocalDateTime fecha) {
         this.fecha = fecha;
     }
 }

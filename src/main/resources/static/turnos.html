@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/turno.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="user-info">
+          <span>Bienvenido, <strong>Juan Pérez</strong></span>
+        </div>
+        <div class="header-buttons">
+          <button id="settings-button">Ajustes</button>
+          <a href="./index.html">
+            <button class="menu-button">Menú principal</button>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1>Administrar turnos</h1>
+      <button id="mostrar-formulario">Nuevo turno</button>
+      <form id="add_new_turno">
+        <div class="turno-container">
+          <label for="paciente">Paciente:</label>
+          <select id="paciente-turno"></select>
+
+          <label for="odontologo">Odontólogo:</label>
+          <select id="odontologo-turno"></select>
+
+          <label for="fecha">Fecha:</label>
+          <input type="datetime-local" id="fecha" />
+        </div>
+
+        <button type="submit" id="agregar">Agregar</button>
+      </form>
+      <div id="turnos"></div>
+    </main>
+    <script type="text/javascript" src="js/postTurno.js"></script>
+    <script type="text/javascript" src="js/deleteTurno.js"></script>
+    <script type="text/javascript" src="js/getAllTurno.js"></script>
+  </body>
+</html>

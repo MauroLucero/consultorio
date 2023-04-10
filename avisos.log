@@ -1,0 +1,4 @@
+[2023-04-1011:44:49] [ ERROR] [GlobalExceptionHandler:19] Content-Type 'application/x-www-form-urlencoded;charset=UTF-8' is not supported
+[2023-04-1011:45:07] [ ERROR] [GlobalExceptionHandler:19] Content-Type 'application/x-www-form-urlencoded;charset=UTF-8' is not supported
+[2023-04-1013:34:13] [ ERROR] [GlobalExceptionHandler:19] JSON parse error: Cannot construct instance of `com.integrador.consultorio.entity.Paciente` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('1')
+[2023-04-1013:34:38] [ ERROR] [GlobalExceptionHandler:19] JSON parse error: Cannot construct instance of `com.integrador.consultorio.entity.Paciente` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('1')
