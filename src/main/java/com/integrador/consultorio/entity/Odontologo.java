@@ -13,12 +13,17 @@ public class Odontologo {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
+
     private int matricula;
+
     private String nombre;
+
     private String apellido;
+
     @OneToMany(mappedBy = "odontologo")
     @JsonIgnore
     private Set<Turno> turnos;
+
 
     public Odontologo() {
     }

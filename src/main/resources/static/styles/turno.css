@@ -176,8 +176,7 @@ button[type="submit"]:hover {
 .turno-nombre {
   font-weight: bold;
   margin-right: 10px;
-  margin: 0;
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 .turno-dni {
@@ -230,11 +229,10 @@ button[type="submit"]:hover {
 .borrar-button {
   background-color: #dc3545;
 }
+
 .borrar-button:hover {
   background-color: #91242f;
 }
-
-
 
 select,
 input[type="date"] {

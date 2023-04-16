@@ -11,9 +11,13 @@ public class Domicilio {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
 
     private Long id;
+
     private String calle;
+
     private Integer numero;
+
     private  String localidad;
+
     private String provincia;
 
     @OneToOne(mappedBy = "domicilio")

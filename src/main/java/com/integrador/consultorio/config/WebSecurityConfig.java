@@ -41,12 +41,12 @@ public class WebSecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        return email -> usuarioRepository.findByUsername(email)
+        return user -> usuarioRepository.findByUsername(user)
                 .map(u -> User.withUsername(u.getUsername())
                         .password(u.getPassword())
                         .roles(u.getRol().getDescripcion())
                         .build())
-                .orElseThrow(() -> new RuntimeException("No existe el usuario con email: " + email));
+                .orElseThrow(() -> new RuntimeException("No existe el usuario: " + user));
 
     }
 
