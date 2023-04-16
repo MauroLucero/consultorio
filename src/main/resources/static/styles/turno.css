@@ -3,12 +3,12 @@ body {
   background-color: #f2f2f2;
 }
 
-/*Header*/
+/* Header */
 
 header {
   width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #cccccc;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
 }
 
 .header-container {
@@ -30,7 +30,7 @@ header {
 
 .header-buttons button {
   background-color: #007bff;
-  color: #ffffff;
+  color: #fff;
   border: none;
   padding: 10px 20px;
   margin-left: 10px;
@@ -39,7 +39,7 @@ header {
 
 .menu-button {
   background-color: #007bff;
-  color: #ffffff;
+  color: #fff;
   border: none;
   padding: 10px 20px;
   margin-right: 10px;
@@ -47,11 +47,11 @@ header {
 }
 
 #settings-button {
-  background-color: #cccccc;
+  background-color: #ccc;
 }
 
 #settings-button:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 
 /* Form */
@@ -169,7 +169,7 @@ button[type="submit"]:hover {
   align-items: center;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #ffffff;
+  background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -181,7 +181,7 @@ button[type="submit"]:hover {
 }
 
 .turno-dni {
-  color: #999999;
+  color: #999;
   font-size: 14px;
   margin-right: 10px;
   margin: 0;
@@ -205,8 +205,6 @@ button[type="submit"]:hover {
 .turno-info {
   flex-grow: 1;
 }
-
-
 
 .turno-actions {
   display: flex;

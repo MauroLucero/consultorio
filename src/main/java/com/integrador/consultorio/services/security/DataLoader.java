@@ -17,7 +17,7 @@ public class DataLoader implements ApplicationRunner {
     public void run(ApplicationArguments args) throws BadRequestException {
         usuarioService.guardar(
                 Usuario.builder()
-                        .username("admin@gmail.com")
+                        .username("admin")
                         .password("admin")
                         .rol(new Rol("ADMIN"))
                         .build()

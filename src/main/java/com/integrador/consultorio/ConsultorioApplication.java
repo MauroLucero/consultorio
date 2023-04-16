@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ConsultorioApplication {
 
 	public static void main(String[] args) {
-		PropertyConfigurator.configure("C:\\Users\\mauro\\Desktop\\consultorio\\src\\main\\resources\\log4j.properties");
+		PropertyConfigurator.configure("src/main/resources/log4j.properties");
 		SpringApplication.run(ConsultorioApplication.class, args);
 	}
 

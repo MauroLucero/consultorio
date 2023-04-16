@@ -3,12 +3,13 @@ body {
   font-family: sans-serif;
 }
 
-/*-----------HEADER-----------*/
+/* -----------HEADER----------- */
 header {
   width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #cccccc;
 }
+
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -27,7 +28,7 @@ header {
 }
 .header-buttons button {
   background-color: #e74c3c;
-  color: #ffffff;
+  color: #fff;
   border: none;
   padding: 10px 20px;
   margin-left: 10px;
@@ -36,7 +37,7 @@ header {
 
 .menu-button {
   background-color: #007bff;
-  color: #ffffff;
+  color: #fff;
   border: none;
   padding: 10px 20px;
   margin-right: 10px;
@@ -44,18 +45,18 @@ header {
 }
 
 #settings-button {
-  background-color: #cccccc;
+  background-color: #ccc;
 }
 
 #settings-button:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 
 #logout-button:hover {
   background-color: #007bff;
 }
 
-/*----------MAIN------------*/
+/* ----------MAIN------------ */
 
 main {
   display: flex;
