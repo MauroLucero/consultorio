@@ -37,7 +37,7 @@ mvn clean package
 java -jar consultorio.jar
 ```
 
-Una vez hecho esto Tomcat levantara el servidor en el puerto 8080. La credenciales por defecto son `USER: admin` y `PASS: admin`. Se pueden cambiar o crear nuevas en `src/main/java/com/integrador/consultorio/services/security/DataLoader.java`.
+Una vez hecho esto Tomcat levantara el servidor en el puerto 8080. La credenciales por defecto son `USER: admin` y `PASS: admin`. Se pueden editar o crear nuevas credenciales en `src/main/java/com/integrador/consultorio/services/security/DataLoader.java`.
 
 ## Endpoints
 
