@@ -10,9 +10,9 @@ Proyecto de funciones CRUD y API REST para el manejo de pacientes, odontologos y
 - `Spring Boot`
 
 ## Dependencias
-- `Sring Web:` Alta de servidor
-- `Sring Data JPA:`: ORM
-- `Sring Security:` Seguridad y Login
+- `Spring Web:` Alta de servidor
+- `Spring Data JPA:`: ORM
+- `Spring Security:` Seguridad y Login
 - `Log4j:` Manejo de logs
 - `JUNIT:` Test unitarios
 
