@@ -38,7 +38,20 @@
 
         <button type="submit" id="agregar">Agregar</button>
       </form>
-      <div id="turnos"></div>
+      <div id="turnos">
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Paciente</th>
+              <th>Odontologo</th>
+              <th>Fecha</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tablaBody"></tbody>
+        </table>
+      </div>
     </main>
     <script type="text/javascript" src="js/postTurno.js"></script>
     <script type="text/javascript" src="js/deleteTurno.js"></script>

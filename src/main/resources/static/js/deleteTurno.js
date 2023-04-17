@@ -7,7 +7,7 @@ function deleteBy(id) {
 
     fetch(url, settings).then((response) => response.JSON);
 
-    let idTurno = "#turno-" + id;
-    document.querySelector(idTurno).remove();
+    let row_id = "#tr_" + id;
+    document.querySelector(row_id).remove();
   }
 }

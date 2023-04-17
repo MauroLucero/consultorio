@@ -239,3 +239,24 @@ button[type="submit"]:hover {
   background-color: #91242f;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  background-color: #f2f2f2;
+}

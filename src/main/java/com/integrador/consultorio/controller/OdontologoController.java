@@ -47,7 +47,7 @@ public class OdontologoController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> eliminarOdontologo(@PathVariable("id") long id){
-        odontologoService.buscarOdontologo(id);
+        odontologoService.borrarOdontologo(id);
         return ResponseEntity.ok(HttpStatus.OK);
     }
 }

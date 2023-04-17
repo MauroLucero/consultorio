@@ -2,27 +2,30 @@ window.addEventListener("load", function () {
   fetch("http://localhost:8080/odontologos/")
     .then((response) => response.json())
     .then((data) => {
-      const odontologosDiv = document.getElementById("odontologos");
-      const listaOdontologos = document.createElement("ul");
-      listaOdontologos.setAttribute("class", "odontologo-list");
-
       data.forEach((odontologo) => {
-        listaOdontologos.innerHTML +=
-          '<li class="paciente-item" id="odontologo-' +
-          odontologo.id +
-          '"><div class="odontologo-info"><h3 class="odontologo-nombre">' +
-          odontologo.nombre +
-          " " +
-          odontologo.apellido +
-          '</h3><p class="odontologo-matricula">Matricula: ' +
-          odontologo.matricula +
-          '</p></div><div class="odontologo-actions"><button class="editar-button" onclick="findBy(' +
+        const newRow = document.createElement("tr");
+        newRow.id = "tr_" + odontologo.id;
+        const newExpediente = document.createElement("td");
+        newExpediente.textContent = odontologo.id;
+        newRow.appendChild(newExpediente);
+        const newNombre = document.createElement("td");
+        newNombre.textContent = odontologo.nombre;
+        newRow.appendChild(newNombre);
+        const newApellido = document.createElement("td");
+        newApellido.textContent = odontologo.apellido;
+        newRow.appendChild(newApellido);
+        const newMatricula = document.createElement("td");
+        newMatricula.textContent = odontologo.matricula;
+        newRow.appendChild(newMatricula);
+        const newAcciones = document.createElement("td");
+        newAcciones.innerHTML =
+          '<button class="editar-button" onclick="findBy(' +
           odontologo.id +
           ')">Editar</button><button class="borrar-button" onclick="deleteBy(' +
           odontologo.id +
-          ')">Borrar</button></div></li>';
+          ')">Borrar</button>';
+        newRow.appendChild(newAcciones);
+        tablaBody.appendChild(newRow);
       });
-
-      odontologosDiv.appendChild(listaOdontologos);
     });
 });

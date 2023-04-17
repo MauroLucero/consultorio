@@ -2,27 +2,33 @@ window.addEventListener("load", function () {
   fetch("http://localhost:8080/pacientes/")
     .then((response) => response.json())
     .then((data) => {
-      const pacientesDiv = document.getElementById("pacientes");
-      const listaPacientes = document.createElement("ul");
-      listaPacientes.setAttribute("class", "paciente-list");
-
       data.forEach((paciente) => {
-        listaPacientes.innerHTML +=
-          '<li class="paciente-item" id="paciente-' +
-          paciente.id +
-          '"><div class="paciente-info"><h3 class="paciente-nombre">' +
-          paciente.nombre +
-          " " +
-          paciente.apellido +
-          '</h3><p class="paciente-dni">DNI: ' +
-          paciente.dni +
-          '</p></div><div class="paciente-actions"><button class="editar-button" onclick="findBy(' +
+        const newRow = document.createElement("tr");
+        newRow.id = "tr_" + paciente.id;
+        const newExpediente = document.createElement("td");
+        newExpediente.textContent = paciente.id;
+        newRow.appendChild(newExpediente);
+        const newNombre = document.createElement("td");
+        newNombre.textContent = paciente.nombre;
+        newRow.appendChild(newNombre);
+        const newApellido = document.createElement("td");
+        newApellido.textContent = paciente.apellido;
+        newRow.appendChild(newApellido);
+        const newDni = document.createElement("td");
+        newDni.textContent = paciente.dni;
+        newRow.appendChild(newDni);
+        const newFechaIngreso = document.createElement("td");
+        newFechaIngreso.textContent = paciente.fechaIngreso;
+        newRow.appendChild(newFechaIngreso);
+        const newAcciones = document.createElement("td");
+        newAcciones.innerHTML =
+          '<button class="editar-button" onclick="findBy(' +
           paciente.id +
           ')">Editar</button><button class="borrar-button" onclick="deleteBy(' +
           paciente.id +
-          ')">Borrar</button></div></li>';
+          ')">Borrar</button>';
+        newRow.appendChild(newAcciones);
+        tablaBody.appendChild(newRow);
       });
-
-      pacientesDiv.appendChild(listaPacientes);
     });
 });

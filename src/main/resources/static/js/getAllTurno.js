@@ -36,31 +36,32 @@ window.addEventListener("load", function () {
   fetch("http://localhost:8080/turnos/")
     .then((response) => response.json())
     .then((data) => {
-      const turnosDiv = document.getElementById("turnos");
-      const listaTurnos = document.createElement("ul");
-      listaTurnos.setAttribute("class", "turno-list");
-
       data.forEach((turno) => {
-        listaTurnos.innerHTML +=
-          '<li class="paciente-item" id="turno-' +
+        const newRow = document.createElement("tr");
+        newRow.id = "tr_" + turno.id;
+        const newId = document.createElement("td");
+        newId.textContent = turno.id;
+        newRow.appendChild(newId);
+        const newPaciente = document.createElement("td");
+        newPaciente.textContent =
+          turno.paciente.nombre + " " + turno.paciente.apellido;
+        newRow.appendChild(newPaciente);
+        const newOdontologo = document.createElement("td");
+        newOdontologo.textContent =
+          turno.odontologo.nombre + " " + turno.odontologo.apellido;
+        newRow.appendChild(newOdontologo);
+        const newFecha = document.createElement("td");
+        newFecha.textContent = turno.fecha;
+        newRow.appendChild(newFecha);
+        const newAcciones = document.createElement("td");
+        newAcciones.innerHTML =
+          '<button class="editar-button" onclick="findBy(' +
           turno.id +
-          '"><div class="turno-info"><h3 class="turno-paciente">' +
-          turno.paciente.nombre +
-          " " +
-          turno.paciente.apellido +
-          '</h3><h3 class="turno-odontologo">' +
-          turno.odontologo.nombre +
-          " " +
-          turno.odontologo.apellido +
-          " MP:" +
-          turno.odontologo.matricula +
-          '</h3><p class="turno-fecha">Fecha: ' +
-          turno.fecha +
-          '</p></div><div class="turno-actions"><button class="editar-button">Editar</button><button class="borrar-button" onclick="deleteBy(' +
+          ')">Editar</button><button class="borrar-button" onclick="deleteBy(' +
           turno.id +
-          ')">Borrar</button></div></li>';
+          ')">Borrar</button>';
+        newRow.appendChild(newAcciones);
+        tablaBody.appendChild(newRow);
       });
-
-      turnosDiv.appendChild(listaTurnos);
     });
 });
