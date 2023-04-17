@@ -4,7 +4,7 @@
 # CTD - Proyecto Integrador: Consultorio Odontológico
 Backend I
 
-Proyecto que consiste en funciones CRUD y API REST para el manejo de pacientes, odontologos y turnos de una pagina web de una clínica odontológica. El Front-end permite observar y utilizar los distintos Endpoints, hecho con Javascript y CSS unicamente.
+Proyecto de funciones CRUD y API REST para el manejo de pacientes, odontologos y turnos de una pagina web de una clínica odontológica. El Front-end permite observar y utilizar los distintos Endpoints, hecho con Javascript y CSS unicamente.
 
 ## Framework
 - `Spring Boot`
