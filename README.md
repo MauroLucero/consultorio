@@ -22,22 +22,6 @@ Proyecto de funciones CRUD y API REST para el manejo de pacientes, odontologos y
 - [Maven](https://maven.apache.org/download.cgi)
 - [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 
-## Instalación
-- ### Clonar:
-
- ```bash
-cd carpeta-destino
-git clone https://github.com/MauroLucero/consultorio.git
-
-```
-- ### Maven:
-
-```bash
-mvn clean package
-java -jar consultorio.jar
-```
-
-Una vez hecho esto Tomcat levantara el servidor en el puerto 8080. La credenciales por defecto son `USER: admin` y `PASS: admin`. Se pueden editar o crear nuevas credenciales en `src/main/java/com/integrador/consultorio/services/security/DataLoader.java`.
 
 ## Endpoints
 
